@@ -1,31 +1,7 @@
 {
-  "receivedAt": "2021-12-10T21:01:45Z",
-  "messageId": "xrnXb0orfN",
-  "type": "track",
-  "context": {
-    "app": {
-      "name": "Quote-Cof",
-      "version": "359.5223",
-      "namespace": "example.info"
-    },
-    "device": {
-      "id": "e782174b-39e2-4e89-87e7-712a42690759",
-      "advertisingId": "97f92e74-68c2-4ffe-a5a4-1ee940793fc2",
-      "manufacturer": "Warmjayin",
-      "model": "Unistring",
-      "type": "android"
-    },
-    "ip": "67.186.73.44",
-    "locale": "nl-NL",
-    "os": {
-      "version": "-427.5644"
-    }
-  },
-  "properties": {
-    "title": "Intro to Analytics"
-  },
-  "event": "Course Clicked",
-  "userId": "Adb1mOTsQU",
-  "anonymousId": "Pm68bQLAFf",
-  "timestamp": "2021-12-10T21:01:45Z"
+  "message": {
+    "data": "eyJjaGFubmVsIjoic2VydmVyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUub3JnIiwiZXZlbnQiOiJTZWdtZW50IFRlc3QgRXZlbnQgTmFtZSIsIm1lc3NhZ2VJZCI6InNlZ21lbnQtdGVzdC1tZXNzYWdlLW5oNHQ1OCIsInByb2plY3RJZCI6IjI2cWgxenY0OXpzSG9oQUFEVmhwTjkiLCJwcm9wZXJ0aWVzIjp7InByb3BlcnR5MSI6MSwicHJvcGVydHkyIjoidGVzdCIsInByb3BlcnR5MyI6dHJ1ZX0sInJlcGxheSI6dHJ1ZSwidGltZXN0YW1wIjoiMjAyMi0wMS0yMFQxNzowNzozNy4xMTBaIiwidHlwZSI6InRyYWNrIiwidXNlcklkIjoidGVzdC11c2VyLXh1b252In0=",
+    "messageId": "3685713202307058",
+    "publishTime": "2022-01-20T17:37:54.099Z"
+  }
 }

@@ -1,16 +1,7 @@
 {
-  "receivedAt": "2021-12-11T01:52:35Z",
-  "messageId": "zPV3xOop6D",
-  "type": "identify",
-  "traits": {
-    "address": {
-      "city": "San Francisco",
-      "country": "US",
-      "postalCode": "94111",
-      "state": "CA"
-    }
-  },
-  "userId": "Onn2qoQPno",
-  "anonymousId": "KY0vLZWnRF",
-  "timestamp": "2021-12-11T01:52:35Z"
+  "message": {
+    "data": "eyJjaGFubmVsIjoic2VydmVyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUub3JnIiwibWVzc2FnZUlkIjoic2VnbWVudC10ZXN0LW1lc3NhZ2Uta3A1M3IiLCJwcm9qZWN0SWQiOiIyNnFoMXp2NDl6c0hvaEFBRFZocE45IiwicmVwbGF5Ijp0cnVlLCJ0aW1lc3RhbXAiOiIyMDIyLTAxLTIwVDE5OjU4OjI0LjA0NFoiLCJ0cmFpdHMiOnsidHJhaXQxIjoxLCJ0cmFpdDIiOiJ0ZXN0IiwidHJhaXQzIjp0cnVlfSwidHlwZSI6ImlkZW50aWZ5IiwidXNlcklkIjoidGVzdC11c2VyLTludTgwcCJ9",
+    "messageId": "3685713202307058",
+    "publishTime": "2022-01-20T17:37:54.099Z"
+  }
 }

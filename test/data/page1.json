@@ -1,13 +1,7 @@
 {
-  "receivedAt": "2021-12-10T21:01:45Z",
-  "messageId": "WyOJTdWpGU",
-  "type": "page",
-  "name": "Home",
-  "properties": {
-    "title": "Welcome | Initech",
-    "url": "example.org"
-  },
-  "userId": null,
-  "anonymousId": "nXPjMULTLF",
-  "timestamp": "2021-12-10T21:01:45Z"
+  "message": {
+    "data": "eyJjaGFubmVsIjoic2VydmVyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUub3JnIiwibWVzc2FnZUlkIjoic2VnbWVudC10ZXN0LW1lc3NhZ2UtNnJoNHFuIiwibmFtZSI6IkhvbWUgUGFnZSIsInByb2plY3RJZCI6IjI2cWgxenY0OXpzSG9oQUFEVmhwTjkiLCJwcm9wZXJ0aWVzIjp7InByb3BlcnR5MSI6MSwicHJvcGVydHkyIjoidGVzdCIsInByb3BlcnR5MyI6dHJ1ZX0sInJlcGxheSI6dHJ1ZSwidGltZXN0YW1wIjoiMjAyMi0wMS0yMFQxODo1Njo1OC40ODJaIiwidHlwZSI6InBhZ2UiLCJ1c2VySWQiOiJ0ZXN0LXVzZXItYnRzbjFjIn0=",
+    "messageId": "3685713202307058",
+    "publishTime": "2022-01-20T17:37:54.099Z"
+  }
 }

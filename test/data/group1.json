@@ -1,12 +1,7 @@
 {
-  "receivedAt": "2021-12-11T01:52:35Z",
-  "messageId": "xTAAYCUC3V",
-  "type": "group",
-  "traits": {
-    "website": "example.org"
-  },
-  "groupId": "MvEWy5dOSw",
-  "userId": "Oyo3fOJieC",
-  "anonymousId": "yal38bMeV0",
-  "timestamp": "2021-12-11T01:52:35Z"
+  "message": {
+    "data": "eyJjaGFubmVsIjoic2VydmVyIiwiZW1haWwiOiJ0ZXN0QGV4YW1wbGUub3JnIiwiZ3JvdXBJZCI6InRlc3QtZ3JvdXAtdmtoY3hvIiwibWVzc2FnZUlkIjoic2VnbWVudC10ZXN0LW1lc3NhZ2UtcDEydGFwaCIsInByb2plY3RJZCI6IjI2cWgxenY0OXpzSG9oQUFEVmhwTjkiLCJyZXBsYXkiOnRydWUsInRpbWVzdGFtcCI6IjIwMjItMDEtMjBUMTg6NTA6NTkuOTUwWiIsInRyYWl0cyI6eyJ0cmFpdDEiOjEsInRyYWl0MiI6InRlc3QiLCJ0cmFpdDMiOnRydWV9LCJ0eXBlIjoiZ3JvdXAiLCJ1c2VySWQiOiJ0ZXN0LXVzZXItNmJqbjQifQ==",
+    "messageId": "3685713202307058",
+    "publishTime": "2022-01-20T17:37:54.099Z"
+  }
 }

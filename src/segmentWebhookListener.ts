@@ -21,18 +21,9 @@ export function segmentWebhookListener (
   request: express.Request,
   response: express.Response
 ) {
-  const authorization = request.headers.authorization;
-  const requestData = request.body;
-
-  if (!authorization) {
-    response.status(401).send({ message: 'Authorization header is missing.' });
-    return;
-  }
-
-  if (authorization != base64EncodedApiKey) {
-    response.status(401).send({ message: 'API key is invalid.' });
-    return;
-  }
+  const data = Buffer.from(request.body.message.data, 'base64').toString('utf-8');
+  const requestData = JSON.parse(data);
+  requestData.receivedAt = request.body.message.publishTime;
 
   try {
     switch(requestData.type) {
@@ -72,29 +63,27 @@ export function segmentWebhookListener (
 
 function insertTrack(requestData: any) {
   const data: any[] = [
-        /* id */ requestData.messageId,
-        /* received_at */ requestData.receivedAt,
-        /* sent_at */ requestData.timestamp,
-        /* user_id */ requestData.userId,
-        /* anonymous_id */ requestData.anonymousId,
-        /* context */ JSON.stringify(requestData.context),
-        /* properties */ JSON.stringify(requestData.properties),
-        /* event */ requestData.type,
-        /* event_text */ requestData.event
+    /* id */ requestData.messageId,
+    /* received_at */ requestData.receivedAt,
+    /* sent_at */ requestData.timestamp,
+    /* user_id */ requestData.userId,
+    /* properties */ JSON.stringify(requestData.properties),
+    /* event_text */ requestData.event,
+    /* email */ requestData.email,
   ];
-  execute('insert into segment.tracks (?, ?, ?, ?, ?, ?, ?, ?, ?)', data);
+  execute('insert into segment.tracks (?, ?, ?, ?, ?, ?, ?)', data);
   return;
 }
 
 function insertPage(requestData: any) {
   const data: any[] = [
-        /* id */ requestData.messageId,
-        /* received_at */ requestData.receivedAt,
-        /* sent_at */ requestData.timestamp,
-        /* user_id */ requestData.userId,
-        /* anonymous_id */ requestData.anonymousId,
-        /* properties */ JSON.stringify(requestData.properties),
-        /* page */ requestData.name
+    /* id */ requestData.messageId,
+    /* received_at */ requestData.receivedAt,
+    /* sent_at */ requestData.timestamp,
+    /* user_id */ requestData.userId,
+    /* properties */ JSON.stringify(requestData.properties),
+    /* page */ requestData.name,
+    /* email */ requestData.email,
   ];
   execute('insert into segment.pages (?, ?, ?, ?, ?, ?, ?)', data);
   return;
@@ -102,27 +91,27 @@ function insertPage(requestData: any) {
 
 function insertScreen(requestData: any) {
   const data: any[] = [
-        /* id */ requestData.messageId,
-        /* received_at */ requestData.receivedAt,
-        /* sent_at */ requestData.timestamp,
-        /* user_id */ requestData.userId,
-        /* anonymous_id */ requestData.anonymousId,
-        /* properties */ JSON.stringify(requestData.properties),
-        /* screen */ requestData.name
-  ];
-  execute('insert into segment.screens (?, ?, ?, ?, ?, ?, ?)', data);
-  return;
+    /* id */ requestData.messageId,
+    /* received_at */ requestData.receivedAt,
+    /* sent_at */ requestData.timestamp,
+    /* user_id */ requestData.userId,
+    /* properties */ JSON.stringify(requestData.properties),
+    /* screen */ requestData.name,
+    /* email */ requestData.email,
+];
+execute('insert into segment.screens (?, ?, ?, ?, ?, ?, ?)', data);
+return;
 }
 
 function insertGroup(requestData: any) {
   const data: any[] = [
-        /* id */ requestData.messageId,
-        /* received_at */ requestData.receivedAt,
-        /* sent_at */ requestData.timestamp,
-        /* user_id */ requestData.userId,
-        /* anonymous_id */ requestData.anonymousId,
-        /* traits */ JSON.stringify(requestData.traits),
-        /* group_id */ requestData.groupId
+    /* id */ requestData.messageId,
+    /* received_at */ requestData.receivedAt,
+    /* sent_at */ requestData.timestamp,
+    /* user_id */ requestData.userId,
+    /* traits */ JSON.stringify(requestData.traits),
+    /* group_id */ requestData.groupId,
+    /* email */ requestData.email,
   ];
   execute('insert into segment.groups (?, ?, ?, ?, ?, ?, ?)', data);
   return;
@@ -130,12 +119,12 @@ function insertGroup(requestData: any) {
 
 function insertIdentifies(requestData: any) {
   const data: any[] = [
-        /* id */ requestData.messageId,
-        /* received_at */ requestData.receivedAt,
-        /* sent_at */ requestData.timestamp,
-        /* user_id */ requestData.userId,
-        /* anonymous_id */ requestData.anonymousId,
-        /* traits */ JSON.stringify(requestData.traits)
+    /* id */ requestData.messageId,
+    /* received_at */ requestData.receivedAt,
+    /* sent_at */ requestData.timestamp,
+    /* user_id */ requestData.userId,
+    /* traits */ JSON.stringify(requestData.traits),
+    /* email */ requestData.email,
   ];
   execute('insert into segment.identifies (?, ?, ?, ?, ?, ?)', data);
   return;
